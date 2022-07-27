@@ -1,4 +1,4 @@
-# Project-10 HTML <img src="./screenshot/1.png" width="30"> and CSS <img src="./screenshot/css1.png" width="30">
+# Project-11 HTML <img src="./screenshot/1.png" width="30"> and CSS <img src="./screenshot/css1.png" width="30">
 
 ## Hi, I'm Shyam Tala! 👋
 
