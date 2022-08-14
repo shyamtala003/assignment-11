@@ -15,6 +15,7 @@
 }
 
 nav {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -25,6 +26,11 @@ nav {
 nav .logo img {
     filter: invert(1);
     width: 100px;
+}
+
+.menuIcon
+{
+    display: none;
 }
 
 nav ul {
@@ -54,6 +60,33 @@ nav ul li a.btn {
     border-radius: 10px;
     font-weight: 600;
 }
+
+@media  (max-width:1160px) {
+    .menuIcon
+    {
+        display: inline;
+        font-size: 30px;
+    }
+    nav ul
+    {
+        position: absolute;
+        display: none;
+        background: #fff;
+        border: 2px solid #3bb0ff;
+        border-radius: 10px;
+        text-align: center;
+        padding: 30px;
+        flex-direction: column;
+        top: 100%;
+        right: 8%;
+
+    }
+    .menuIcon:focus ~ ul
+    {
+        display: flex;
+    }
+}
+
 
 .hero__section {
     margin-top: 10%;
@@ -107,30 +140,37 @@ section.services {
 }
 
 .services .text_content {
+    width: 100%;
     display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    flex: 1;
     gap: 10px;
 }
 
-.text_content .right_text {
-    flex: .5;
-}
+
 
 .text_content .right_text h1 {
+    max-width: 600px;
+    min-width: 300px;
     font-size: 55px;
 }
 
-.text_content .left_text {
-    flex: .5;
-}
 
 .text_content .left_text p {
+    max-width: 600px;
+    min-width: 300px;
     color: grey;
     line-height: 30px;
 }
+@media screen and (max-width:900px) {
+    .text__content
+    {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
 
 .services_card {
     padding-inline: 20px 8%;
@@ -351,6 +391,7 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 40px;
     align-items: flex-start;
     justify-content: space-between;
     text-transform: capitalize;
